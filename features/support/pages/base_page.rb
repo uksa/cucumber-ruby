@@ -1,8 +1,9 @@
 class Base
   attr_reader :driver
 
-  BASE_URL = "http://www.uksa.eu"
+  BASE_URL = "http://www.uksa-testing.co.uk"
   BODY     = { tag_name: "body" }
+  FOOTER   = { css: '.footer' }
 
   def initialize(driver)
     @driver = driver
@@ -50,7 +51,9 @@ class Base
   end
 
   def verify_page(text)
-    wait_for { displayed?(BODY) }
+    sleep(1) #todo fix the issue with page waits
+    wait_for { displayed?(FOOTER) }
+    sleep(1) #todo fix the issue with page waits
     text_of(BODY).include?(text).should == true
   end
 

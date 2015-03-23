@@ -12,13 +12,21 @@ class Login < Base
 
   def login
     click_on(LOGIN)
-    verify_page('Login')
+    verify_page('Sign in')
   end
 
   def login_user_data(user_data)
     login
     enter_user_data(user_data)
     select_login
+    MembersDetails.new
+  end
+
+  def failed_login_user_data(user_data)
+    login
+    enter_user_data(user_data)
+    select_login
+    self
   end
 
   def enter_user_data(user_data)
@@ -37,6 +45,10 @@ class Login < Base
 
   def goto(page)
     visit(page)
+  end
+
+  def assert_login_page(text)
+    text_of(BODY).include?(text)
   end
 
 end

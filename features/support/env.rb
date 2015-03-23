@@ -1,10 +1,11 @@
 require 'cucumber'
 require 'selenium-webdriver'
-require 'rspec-expectations'
+require 'rspec'
 require 'securerandom'
 
 Before do
-  @driver = Selenium::WebDriver.for :firefox
+  @driver = Selenium::WebDriver.for :chrome
+  @driver.manage.timeouts.implicit_wait = 10
 end
 
 After do
@@ -15,7 +16,7 @@ Before do
   caps = Selenium::WebDriver::Remote::Capabilities.firefox
   caps.version = "5"
   caps.platform = :XP
-    caps[:name] = "FlyVictor Automation Testing #{Time.now}"
+    caps[:name] = "UKSA-Testing #{Time.now}"
 
   begin
     @driver = Selenium::WebDriver.for(
