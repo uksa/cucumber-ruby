@@ -4,6 +4,7 @@ class Base
   BASE_URL = "http://www.uksa-testing.co.uk"
   BODY     = { tag_name: "body" }
   FOOTER   = { css: '.footer' }
+  H3_TAG   = { css: '.container>h3'}
 
   def initialize(driver)
     @driver = driver
@@ -51,10 +52,8 @@ class Base
   end
 
   def verify_page(text)
-    sleep(1) #todo fix the issue with page waits
-    wait_for { displayed?(FOOTER) }
-    sleep(1) #todo fix the issue with page waits
-    text_of(BODY).include?(text).should == true
+    wait_for { displayed?(H3_TAG) }
+    title.include?(text).should == true
   end
 
   def wait_for(seconds=10)

@@ -47,7 +47,7 @@ class Login < Base
     visit(page)
   end
 
-  def assert_login_page(text)
+  def assert_page(text)
     text_of(BODY).include?(text)
   end
 
