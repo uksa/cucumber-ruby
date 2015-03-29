@@ -6,7 +6,7 @@ Feature: Sign In
   Scenario: Unknown Attempted to Sign In
     Given I'm a Unknown User
     When I attempt to Sign into the application
-    Then I will still be on the Sign in page
+    Then I will remain on the Sign in page
 
   Scenario: Admin Sign in
     Given I'm a Admin User

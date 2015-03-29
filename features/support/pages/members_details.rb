@@ -1,4 +1,4 @@
-class MembersDetails < Base
+class MembersDetails < BasePage
 
   def initialize
     # verify_page('Member Details')

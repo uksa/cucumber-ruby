@@ -1,4 +1,4 @@
-class Base
+class BasePage
   attr_reader :driver
 
   BASE_URL = "http://www.uksa-testing.co.uk"
@@ -59,5 +59,14 @@ class Base
   def wait_for(seconds=10)
     Selenium::WebDriver::Wait.new(:timeout => seconds).until { yield }
   end
+
+  def goto(page)
+    visit(page)
+  end
+
+  def assert_page(text)
+    text_of(BODY).include?(text)
+  end
+
 
 end
