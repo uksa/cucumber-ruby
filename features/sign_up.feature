@@ -3,8 +3,6 @@ Feature: Sign Up
   I want to Sign Up
   So that I can be a Member of the UKSA
 
-  #Email Validation on _, causes error
-  @defect
   Scenario: New User Sign Up Page
     Given I'm on the Member Registration page
     Then I will be able to Sign Up to the UKSA
