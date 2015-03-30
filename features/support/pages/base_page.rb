@@ -26,10 +26,6 @@ class BasePage
     find(locator).send_keys input
   end
 
-  def type_last(locator, input)
-    driver.find_elements(locator).last.send_keys input
-  end
-
   def click_on(locator)
     find(locator).click
   end
@@ -64,7 +60,7 @@ class BasePage
     visit(page)
   end
 
-  def assert_page(text)
+  def text_on_page?(text)
     text_of(BODY).include?(text)
   end
 

@@ -2,6 +2,7 @@ require 'cucumber'
 require 'selenium-webdriver'
 require 'rspec'
 require 'securerandom'
+require 'faker'
 
 Before do
   @driver = Selenium::WebDriver.for :firefox

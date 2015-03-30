@@ -11,9 +11,12 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.1)
     diff-lcs (1.2.5)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.8)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    i18n (0.7.0)
     multi_json (1.11.0)
     multi_test (0.1.1)
     parallel (1.3.3)
@@ -44,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
+  faker
   parallel_tests
   rspec
   rspec-expectations

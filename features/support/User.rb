@@ -16,4 +16,8 @@ class User
     {username: 'sam@sam.com', password: 'xxx'}
   end
 
+  def self.new_user
+    {username: Faker::Internet.email, password: 'Password1', associate_member: Faker::Name.name}
+  end
+
 end

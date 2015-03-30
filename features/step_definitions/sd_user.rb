@@ -13,3 +13,7 @@ end
 Given(/^I'm a Suspended User$/) do
   @user = User.suspended_user
 end
+
+Given(/^I'm a new User$/) do
+  @user = User.new_user
+end

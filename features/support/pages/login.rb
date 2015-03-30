@@ -12,7 +12,7 @@ class Login < BasePage
   def login_user_data(user_data)
     enter_user_data(user_data)
     select_login
-    MembersDetails.new
+    MembersDetails.new(driver)
   end
 
   def failed_login_user_data(user_data)
