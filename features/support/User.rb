@@ -1,19 +1,19 @@
 class User
 
   def self.standard_user
-    {username: 'samtreweek@yahoo.co.uk', password: 'Password1'}
+    {username: 'uksa.testing+standard@gmail.com', password: 'Password1'}
   end
 
   def self.suspended_user
-    {username: 'samtreweek@hotmail.com', password: 'Password1'}
+    {username: 'uksa.testing+suspend@gmail.com', password: 'Password1'}
   end
 
   def self.admin_user
-    {username: 'samtreweek@gmail.com', password: 'Password1'}
+    {username: 'uksa.testing+admin@gmail.com', password: 'Password1'}
   end
 
   def self.unknown_username
-    {username: 'sam@sam.com', password: 'xxx'}
+    {username: 'kate@bob.com', password: 'xxx'}
   end
 
   def self.new_user
