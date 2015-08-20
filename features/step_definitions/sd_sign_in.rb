@@ -16,7 +16,7 @@ end
 
 
 Then(/^I will see my Member Details$/) do
-  @login.text_on_page?("Member Details").should == true
+  @login.text_on_page?("Contracts").should == true
 end
 
 Given(/^I'm a Logged in Standard User$/) do
