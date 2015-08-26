@@ -3,10 +3,11 @@ require 'selenium-webdriver'
 require 'rspec'
 require 'securerandom'
 require 'faker'
+require 'timeout'
 
 Before do
   @driver = Selenium::WebDriver.for :firefox
-  @driver.manage.timeouts.implicit_wait = 10
+  @driver.manage.timeouts.implicit_wait = 30
 end
 
 After do

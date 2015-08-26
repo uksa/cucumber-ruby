@@ -47,8 +47,16 @@ class BasePage
     driver.title
   end
 
+  def wait_for_title(text)
+    unless title.include?(text)
+      Timeout::timeout(5) do
+        sleep 1
+      end
+    end
+  end
+
   def verify_page(text)
-    wait_for { displayed?(H3_TAG) }
+    wait_for_title(text)
     title.include?(text).should == true
   end
 

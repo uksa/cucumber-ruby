@@ -4,7 +4,7 @@ class MembersDetails < BasePage
 
   def initialize(driver)
     super
-    verify_page('Member Details')
+    verify_page('Members Home')
   end
 
   def get_user_email
