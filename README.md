@@ -7,8 +7,16 @@ Cucumber Ruby testing UKSA.eu
 
 Following tests are available
 
-##Sign In Spec
-1. Authentication Fails for Unknown Credentials
-2. Authentication Passes for Admin
-3. Authentication Passes for Standard User
-4. Authentication Passed for Suspended UserAdded
+##Sign In Feature
+1. Unknown Attempted to Sign In
+2. Admin Sign in
+3. Standard Sign in
+4. Suspended Sign in
+
+##Sign Up
+1. New User Sign Up Page
+2. New User Sign Up
+
+##Member Details
+1. Member Details Default Sections
+2. Member Details User Email
