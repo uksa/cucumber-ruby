@@ -7,7 +7,7 @@ require 'timeout'
 
 Before do
   @driver = Selenium::WebDriver.for :firefox
-  @driver.manage.timeouts.implicit_wait = 30
+  @driver.manage.timeouts.implicit_wait = 10
 end
 
 After do

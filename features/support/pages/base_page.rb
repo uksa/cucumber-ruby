@@ -1,7 +1,7 @@
 class BasePage
   attr_reader :driver
 
-  BASE_URL = "http://www.uksa-testing.co.uk"
+  BASE_URL = "http://www.uksa-testing.co.uk/"
   BODY     = { tag_name: "body" }
   FOOTER   = { css: '.footer' }
   H3_TAG   = { css: '.container>h3'}
@@ -50,7 +50,7 @@ class BasePage
   def wait_for_title(text)
     unless title.include?(text)
       Timeout::timeout(5) do
-        sleep 1
+        sleep 0.5
       end
     end
   end
