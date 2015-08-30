@@ -6,7 +6,7 @@ require 'faker'
 require 'timeout'
 
 Before do
-  @driver = Selenium::WebDriver.for :firefox
+  @driver = Selenium::WebDriver.for :chrome
   @driver.manage.timeouts.implicit_wait = 10
 end
 

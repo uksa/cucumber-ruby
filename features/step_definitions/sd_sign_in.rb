@@ -11,7 +11,7 @@ When(/^I Sign into the application$/) do
 end
 
 Then(/^I will remain on the Sign in page$/) do
-  @login.text_on_page?("Sign in").should == true
+  @login.title.should == "UK Software Alliance | Sign in"
 end
 
 
